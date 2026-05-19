@@ -1,0 +1,46 @@
+# YouTube 宠物选品嗅探报告 2026-W21
+
+- 生成时间: 2026-05-19T15:20:27+00:00
+- 市场: UK
+- 摘要: 本周基于 YouTube 内容信号识别到 2 个可测宠物用品机会；最高分是 Dog post-walk paw washer (75/100, high)。数据源状态: fixture。
+- 数据源策略: Use YouTube Data API as a content-demand signal: search.list, videos.list, commentThreads.list.
+
+## 数据源状态
+- youtube: fixture · 3 records · local fixture data for tests and demos
+
+## Top 10 可测新品
+
+### 1. Dog post-walk paw washer (75/100, high)
+- 宠物/品类: Dog · Outdoor Care
+- 用户痛点: 英国雨天和泥地遛狗后，狗爪清洁耗时且会弄脏车和地毯。
+- 建议售价/供应: £18.99-24.99 · TBD · MOQ TBD
+- 落地页角度: 30 秒清洁遛狗后的泥爪，减少地毯和车内清洁压力。
+- YouTube 信号: Search 92, Velocity 78, Engagement 62, Comments 58, Creator 80
+- 7 天测试: 做雨天遛狗落地页; 拍 3 条 before/after UGC; 测试 £19.99 单品和毛巾套装
+- 素材方向: 雨天进门前后对比; 车后备箱泥爪场景; 小户型地毯保护
+- 风险: 尺寸不适配会导致退货; YouTube 是内容需求代理，不代表真实销量
+  - 证据 youtube: How to clean muddy dog paws after a rainy walk · https://www.youtube.com/watch?v=demo001 · 128000 views · 4100 likes · 320 comments · UK dog care creator
+  - 证据 youtube: Muddy paws car boot clean up routine · https://www.youtube.com/watch?v=demo002 · 84000 views · 2500 likes · 190 comments · Pet travel channel
+
+### 2. Cat calming lick mat (66/100, medium)
+- 宠物/品类: Cat · Anxiety & Enrichment
+- 用户痛点: 室内猫无聊、洗澡剪指甲或独处时容易紧张，主人想找低门槛安抚工具。
+- 建议售价/供应: £12.99-16.99 · TBD · MOQ TBD
+- 落地页角度: 给室内猫一个可清洗、低成本的 grooming calm-down routine。
+- YouTube 信号: Search 74, Velocity 69, Engagement 71, Comments 52, Creator 60
+- 7 天测试: 测试 grooming calm 角度; 组合玩具做 AOV; 收集评论区猫年龄和使用场景
+- 素材方向: 剪指甲前舔食垫 routine; indoor cat boredom relief; 可冷冻慢食演示
+- 风险: 不能宣称治疗焦虑; 材质需明确 food-grade silicone
+  - 证据 youtube: Calm cat nail trim routine with a lick mat · https://www.youtube.com/watch?v=demo003 · 76000 views · 3300 likes · 210 comments · Cat grooming creator
+
+## 趋势上升痛点
+- 英国雨天和泥地遛狗后，狗爪清洁耗时且会弄脏车和地毯。 (Dog post-walk paw washer)
+- 室内猫无聊、洗澡剪指甲或独处时容易紧张，主人想找低门槛安抚工具。 (Cat calming lick mat)
+
+## 排除/高风险品
+- Freeze-dried single-protein treat: 默认排除食品/药品/保健品或高合规声明。
+
+## 下周测试建议
+- 配置 YOUTUBE_API_KEY 并控制每周查询预算。
+- 对 Top 3 产品各做 1 个落地页和 3 条短视频素材。
+- 用独立站 CTR、ATC、询盘价和样品物流成本回填下周评分。

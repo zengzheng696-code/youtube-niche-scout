@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UK Pet Weekly Scout</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Weekly UK Pet DTC Intelligence</p>
+        <h1>英区宠物每周选品报告</h1>
+        <p id="reportMeta" class="subcopy">读取最新报告中...</p>
+      </div>
+      <div class="top-actions">
+        <a class="ghost-btn" href="reports/latest.md" target="_blank">Markdown</a>
+        <a class="ghost-btn" href="reports/latest.html" target="_blank">周报页</a>
+        <button class="primary-btn" id="exportBtn">导出 CSV</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="insight-band" id="sourceStatus"></section>
+
+      <section class="workspace">
+        <aside class="filters" aria-label="筛选条件">
+          <div class="filter-group">
+            <label for="searchInput">搜索</label>
+            <input id="searchInput" type="search" placeholder="关键词、痛点、来源、证据" />
+          </div>
+
+          <div class="filter-group">
+            <label for="petFilter">宠物类型</label>
+            <select id="petFilter">
+              <option value="all">全部</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <label for="categoryFilter">品类</label>
+            <select id="categoryFilter">
+              <option value="all">全部</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <label for="confidenceFilter">可信度</label>
+            <select id="confidenceFilter">
+              <option value="all">全部</option>
+              <option value="high">high</option>
+              <option value="medium">medium</option>
+              <option value="low">low</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <label for="riskFilter">风险</label>
+            <select id="riskFilter">
+              <option value="all">全部</option>
+              <option value="Low">Low</option>
+              <option value="Medium">Medium</option>
+              <option value="High">High</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <label for="sourceFilter">来源</label>
+            <select id="sourceFilter">
+              <option value="all">全部</option>
+              <option value="youtube_search">YouTube Search</option>
+              <option value="youtube_velocity">View Velocity</option>
+              <option value="youtube_engagement">Engagement</option>
+              <option value="youtube_comments">Comments</option>
+              <option value="creator_diversity">Creators</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <label for="minScore">最低评分 <b id="minScoreLabel">0</b></label>
+            <input id="minScore" type="range" min="0" max="100" value="0" />
+          </div>
+
+          <div class="filter-group">
+            <label for="sortBy">排序</label>
+            <select id="sortBy">
+              <option value="score">综合评分</option>
+              <option value="youtube_search">搜索覆盖</option>
+              <option value="youtube_velocity">观看速度</option>
+              <option value="youtube_engagement">互动强度</option>
+              <option value="youtube_comments">评论痛点</option>
+              <option value="creator_diversity">创作者扩散</option>
+            </select>
+          </div>
+
+          <section class="status-panel">
+            <h2>本周摘要</h2>
+            <p id="weeklySummary">暂无摘要。</p>
+          </section>
+        </aside>
+
+        <section class="results">
+          <div class="result-head">
+            <div>
+              <p class="eyebrow">Top Testable Products</p>
+              <h2 id="resultTitle">候选品</h2>
+            </div>
+            <div class="legend">
+              <span><i class="good"></i>high</span>
+              <span><i class="watch"></i>medium</span>
+              <span><i class="risk"></i>low</span>
+            </div>
+          </div>
+          <div id="cards" class="cards"></div>
+        </section>
+      </section>
+    </main>
+
+    <dialog id="detailDialog">
+      <button class="close-btn" id="closeDialog" aria-label="关闭">×</button>
+      <div id="detailContent"></div>
+    </dialog>
+
+    <script src="reports/latest.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
